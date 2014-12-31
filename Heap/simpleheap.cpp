@@ -19,16 +19,7 @@ void push(int n);
 int pop();
 int peek();
 
-private:
 
-// function pointer containing the
-// appropriate heapify function based
-// on whether it is a max heap or a min heap
-(void*)(*heapify)();
-
-// definitions for maxheapify and minheapify
-void max_heapify();
-void min_heapify();
 
 };
 */
@@ -36,10 +27,11 @@ void min_heapify();
 
 
 SimpleHeap::SimpleHeap(int type){
-	
+	heap_init(type, DEF_HEAP_SIZE);
 }
-
-
+SimpleHeap::SimpleHeap(int type, int size){
+	heap_init(type, size);
+}
 void SimpleHeap::heap_init(int type, int size){
 	
 	if (type == HEAP_TYPE_MAX){
@@ -50,4 +42,13 @@ void SimpleHeap::heap_init(int type, int size){
 	}
 
 	this->_heap = new int[size];
+	this->_heap_count = 0;
+}
+
+void SimpleHeap::max_heapify(){
+
+}
+
+void SimpleHeap::min_heapify(){
+
 }

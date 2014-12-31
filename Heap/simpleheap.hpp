@@ -20,7 +20,7 @@ public:
 private:
 
 	int* _heap;
-
+	int _heap_count;
 	// function pointer containing the
 	// appropriate heapify function based
 	// on whether it is a max heap or a min heap

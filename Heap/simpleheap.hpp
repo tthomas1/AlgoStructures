@@ -24,7 +24,7 @@ private:
 	// function pointer containing the
 	// appropriate heapify function based
 	// on whether it is a max heap or a min heap
-	(void)(*heapify)();
+	(void)(SimpleHeap::*heapify)();
 
 	// definitions for maxheapify and minheapify
 	void max_heapify();

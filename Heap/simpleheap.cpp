@@ -43,10 +43,10 @@ SimpleHeap::SimpleHeap(int type){
 void SimpleHeap::heap_init(int type, int size){
 	
 	if (type == HEAP_TYPE_MAX){
-		this->heapify = this->max_heapify;
+		heapify = &SimpleHeap::max_heapify;
 	}
 	else if (type == HEAP_TYPE_MIN){
-		this->heapify = this->min_heapify;
+		heapify = &SimpleHeap::min_heapify;
 	}
 
 	this->_heap = new int[size];

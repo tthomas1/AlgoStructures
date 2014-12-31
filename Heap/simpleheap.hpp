@@ -5,6 +5,10 @@
 
 #define HEAP_TYPE_MAX 0
 #define HEAP_TYPE_MIN 1
+
+#define HEAP_LEFT(A,I) (A[2*I])
+#define HEAP_RIGHT(A,I) (A[(2*I) + 1])
+
 // Simple integer max heap
 //
 class SimpleHeap{
